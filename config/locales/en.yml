@@ -9,14 +9,14 @@ en:
         no_applicable_completed_orders: You need atleast %{number} completed orders before applying this coupon code.
     promotion_rule_types:
       completed_orders:
-        description: User have N completed orders
+        description: User must have X number of completed orders
         name: Completed Orders
       user_role:
-        description: User have one or all roles
-        name: User roles
+        description: User must have none, one or all roles
+        name: User Roles
     user_role_rule:
       choose_roles: Choose Roles
-      label: User must contain X quantity of these roles
-      match_all: all
-      match_any: at least one
-      match_none: none
+      label: User must have
+      match_all: All of these roles
+      match_any: At least one of these roles
+      match_none: None of these roles

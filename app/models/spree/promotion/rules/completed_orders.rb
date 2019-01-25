@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Spree
   class Promotion
     module Rules
@@ -19,7 +21,7 @@ module Spree
             return false
           end
 
-          return true       
+          return true
         end
       end
     end
