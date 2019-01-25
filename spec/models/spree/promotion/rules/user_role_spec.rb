@@ -81,6 +81,27 @@ RSpec.describe Spree::Promotion::Rules::UserRole, type: :model do
           end
         end
       end
+
+      context 'with none match policy' do
+        before { rule.preferred_match_policy = 'none' }
+
+        context 'mismatched roles' do
+          let(:roles_for_user) { [create(:role)] }
+          let(:roles_for_rule) { [create(:role)] }
+          it 'should not be eligible' do
+            expect(rule).to be_eligible(order)
+          end
+        end
+
+        context 'one shared role' do
+          let(:shared_role) { create(:role) }
+          let(:roles_for_user) { [create(:role), shared_role] }
+          let(:roles_for_rule) { [create(:role), shared_role] }
+          it 'should not be eligible' do
+            expect(rule).to_not be_eligible(order)
+          end
+        end
+      end
     end
   end
 end
