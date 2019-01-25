@@ -16,6 +16,7 @@ en:
         name: User roles
     user_role_rule:
       choose_roles: Choose Roles
-      label: User must contain %{select} of these roles
+      label: User must contain X quantity of these roles
       match_all: all
       match_any: at least one
+      match_none: none
