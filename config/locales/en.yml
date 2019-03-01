@@ -4,6 +4,7 @@
 en:
   spree:
     completed_orders: Completed orders
+    cart_items_quantity_is: Cart Items Quantity Is
     eligibility_errors:
       messages:
         no_applicable_completed_orders: You need atleast %{number} completed orders before applying this coupon code.
@@ -14,6 +15,9 @@ en:
       user_role:
         description: User must have none, one or all roles
         name: User Roles
+      item_quantity:
+        name: Item Quantity
+        description: Order includes X number of items
     user_role_rule:
       choose_roles: Choose Roles
       label: User must have

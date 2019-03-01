@@ -1,0 +1,8 @@
+<div class="panel-body">
+  <div class="form-group">
+    <%= label_tag Spree.t(:cart_items_quantity_is) %>
+    <%= select_tag "#{param_prefix}[preferred_operator]", options_for_select(Spree::Promotion::Rules::ItemQuantity::OPERATORS.map{|o| [Spree.t("item_total_rule.operators.#{o}"),o]}, promotion_rule.preferred_operator), { class: 'select2 select_item_total marginb' } %>
+    <br />
+    <%= text_field_tag "#{param_prefix}[preferred_quantity]", promotion_rule.preferred_quantity, :size => 10, class: 'form-control marginb' %>
+  </div>
+</div>

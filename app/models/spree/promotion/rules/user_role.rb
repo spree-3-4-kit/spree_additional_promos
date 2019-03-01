@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module Spree
-  class Promotion < Spree::Base
+  class Promotion
     module Rules
       class UserRole < PromotionRule
         preference :role_ids, :array, default: []
